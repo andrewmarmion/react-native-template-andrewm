@@ -77,6 +77,8 @@ You'll now be able to use filament commands to generate screens, components, net
 
 Tests are stored in `./__tests__`. Jest matches on `*.test.js` this is because detox matches on the *.spec.js and confusions and errors will arise if they are not separate. 
 
+A sample working test exists so run `npm run test` to see it in action.
+
 ### Linting is provided by Eslint
 
 `npm run lint` will run the command `eslint *.js ./ --fix`.
