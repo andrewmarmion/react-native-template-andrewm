@@ -1,0 +1,96 @@
+{
+  "name": "andrewm",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest --verbose",
+    "storybook": "storybook start",
+    "test_update": "jest -u",
+    "test_clear": "jest --clearCache",
+    "lint": "eslint *.js ./ --fix",
+    "detox_ios": "detox build -c ios.sim.debug && detox test -c ios.sim.debug",
+    "detox_android": "detox build -c android.emu.debug && detox test -c android.emu.debug"
+  },
+  "dependencies": {
+    "apisauce": "^0.15.2",
+    "flow-bin": "^0.69.0",
+    "react": "16.6.1",
+    "react-native": "0.57.7",
+    "react-native-fs": "^2.10.14",
+    "react-native-gesture-handler": "^1.0.9",
+    "react-navigation": "^3.0.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-persist": "^4.10.1",
+    "redux-persist-fs-storage": "^1.2.2",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.1.2",
+    "@babel/generator": "7.1.2",
+    "@babel/preset-flow": "7.0.0",
+    "@storybook/addon-actions": "^4.0.11",
+    "@storybook/addon-links": "^4.0.11",
+    "@storybook/addons": "^4.0.11",
+    "@storybook/react-native": "^4.0.11",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^8.0.1",
+    "babel-jest": "23.6.0",
+    "babel-preset-react-native": "^5.0.1",
+    "babel-runtime": "^6.26.0",
+    "detox": "^9.1.2",
+    "eslint": "^4.19.1",
+    "eslint-config-semistandard": "^11.0.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.2.0",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-react": "^7.4.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "jest": "23.6.0",
+    "metro-react-native-babel-preset": "0.50.0",
+    "prop-types": "^15.6.2",
+    "react-dom": "16.6.1",
+    "react-test-renderer": "16.6.1",
+    "semistandard": "^12.0.1"
+  },
+  "jest": {
+    "preset": "react-native",
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
+    },
+    "testMatch": [
+      "<rootDir>/__tests__/**/*.test.js?(x)",
+      "<rootDir>/app/**/*.test.js"
+    ]
+  },
+  "detox": {
+    "configurations": {
+      "ios.sim.debug": {
+        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/Decidr.app",
+        "build": "xcodebuild -project ios/Decidr.xcodeproj -scheme Decidr -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build -UseModernBuildSystem=NO",
+        "type": "ios.simulator",
+        "name": "iPhone 7"
+      },
+      "android.emu.debug": {
+        "binaryPath": "android/app/build/outputs/apk/debug/app-debug.apk",
+        "build": "cd android && ./gradlew assembleDebug assembleAndroidTest -DtestBuildType=debug && cd ..",
+        "type": "android.emulator",
+        "name": "Nexus_5X_API_27_x86"
+      }
+    },
+    "test-runner": "jest"
+  },
+  "rnpm": {
+    "assets": [
+      "app/assets/fonts"
+    ]
+  },
+  "config": {
+    "filament": {
+      "package": "filament-jordandrn"
+    }
+  }
+}
