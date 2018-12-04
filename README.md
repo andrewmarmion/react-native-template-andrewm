@@ -11,7 +11,7 @@ Instructions in `app/*` directories.
 Make sure you have installed the following to run this template properly.
 
 ## package_update.js
-Run `node package_update.js` this will update the `package.json` so that it has the required 
+Run `node package_update.js` this will update the `package.json` so that it has the required updated scripts and values for the following dependencies.
 
 ## Detox
 Detox should be set up on your machine see https://github.com/wix/Detox/blob/master/docs/Introduction.GettingStarted.md for more details on how to install it. At time of writing you will only need to do step one as the `package_update.js` and the inital template setup take care of the remaining steps.
@@ -23,7 +23,7 @@ This template uses storybook to edit components.
 
 To use storybook go to `./index.js` and comment out the line `import MainAppProvider from './app/index';` and uncomment `import Storybook from './storybook';` Save and reload your app to see the storybook view of the components. 
 
-## Optional Filament support
+## Filament support
 
 This repository supports Filament CLI when using the `filament-jordandrn` package.
 
