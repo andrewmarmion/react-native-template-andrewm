@@ -1,5 +1,14 @@
 {
   "name": "react-native-template-andrewm",
   "version": "0.0.4",
-  "repository": "github:andrewmarmion/react-native-template-andrewm"
+  "repository": "github:andrewmarmion/react-native-template-andrewm",
+  "keywords": [
+    "react-native",
+    "template"
+  ],
+  "author": "Andrew Marmion",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andrewmarmion/react-native-template-andrewm/issues"
+  }
 }
