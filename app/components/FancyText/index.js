@@ -5,7 +5,6 @@
 // import react and react-native elements
 import React, { Component } from 'react';
 import { Text } from 'react-native';
-import PropTypes from 'prop-types';
 
 // import screens styles
 import styles from './styles';
@@ -19,6 +18,8 @@ class FancyText extends Component {
    */
   constructor (props: {}) {
     super(props);
+
+    this.state = {};
   }
 
   /**

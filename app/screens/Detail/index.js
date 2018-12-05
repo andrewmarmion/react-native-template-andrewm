@@ -5,7 +5,6 @@
 // import react and react-native elements
 import React, { Component } from 'react';
 import { View, Text, Button } from 'react-native';
-import PropTypes from 'prop-types';
 
 // import redux functions to connect controller to app state
 import { connect } from 'react-redux';
