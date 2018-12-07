@@ -24,7 +24,7 @@ json.scripts = scripts;
 console.log('Adding filament support...')
 json.config = {
   'filament': {
-    'package': 'filament-jordandrn'
+    'package': 'filament-andrewmrn'
   }
 };
 
