@@ -9,6 +9,8 @@ import Button from './Button';
 import CenterView from './CenterView';
 import Welcome from './Welcome';
 
+// Stories go here
+
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
 storiesOf('Button', module)
