@@ -1,9 +1,16 @@
 const fs = require('fs');
+const path = require('path');
 let json = require('./package.json');
 
 let { scripts, name } = json;
 
-console.log('Adding missing scripts');
+const writeFile = (fileName, data) => fs.writeFileSync(path.join(__dirname, fileName), data);
+const deleteFile = fileName => fs.unlinkSync(path.join(__dirname, fileName), err => { 
+  if (err) console.log(`Could not delete ${fileName}` )
+});
+
+console.log('\n\nSetting up package.json')
+console.log('Adding missing scripts...');
 scripts.storybook = 'storybook start';
 scripts.test = 'jest --verbose';
 scripts.test_update = 'jest -u';
@@ -14,13 +21,14 @@ scripts.detox_android = 'detox build -c android.emu.debug && detox test -c andro
 
 json.scripts = scripts;
 
+console.log('Adding filament support...')
 json.config = {
   'filament': {
     'package': 'filament-jordandrn'
   }
 };
 
-console.log('Setting jest');
+console.log('Setting jest...');
 // this sets the transform and the testMatch so that it doesn't interfere with detox
 json.jest = {
   'preset': 'react-native',
@@ -33,7 +41,7 @@ json.jest = {
   ]
 };
 
-console.log('Setting detox');
+console.log('Setting detox...');
 json.detox = {
   'configurations': {
     'ios.sim.debug': {
@@ -52,14 +60,18 @@ json.detox = {
   'test-runner': 'jest'
 };
 
-console.log('Setting rnpm');
+console.log('Setting rnpm...');
 json.rnpm = {
   'assets': [
     'app/assets/fonts'
   ]
 };
 
-fs.writeFile('package.json', JSON.stringify(json, null, 2), 'utf8', (err) => {
-  if (err) throw err;
-  console.log('complete');
-});
+console.log('Writing to package.json...')
+writeFile('package.json', JSON.stringify(json, null, 2));
+
+console.log('Removing setup files...')
+deleteFile('LICENSE')
+deleteFile('setup.js');
+
+console.log('Setup completed!');

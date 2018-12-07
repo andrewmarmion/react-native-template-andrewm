@@ -1,20 +1,19 @@
 # `react-native-template-andrewm`
 
 ```
-react-native init NewApp --template andrewm
-react-native init NewApp --template https://github.com/andrewmarmion/react-native-template-andrewm
+react-native init NewApp --template andrewm && node NewApp/setup.js
 ```
 
 Instructions in `app/*` directories.
 
 # Finishing Setup
-Make sure you have detox, storybook and filamentcli on your machine. If you have these already then you can run `package_update.json`.
+Make sure you have detox, storybook and filamentcli on your machine. If you have these already then you can run `setup.js`.
 
-## package_update.js
-Run `node package_update.js` this will update the `package.json` so that it has the required updated scripts and values for the following dependencies.
+## setup.js
+Run `node setup.js` this will update the `package.json` so that it has the required updated scripts and values for the following dependencies.
 
 ## Detox
-Detox should be set up on your machine see [Detox - Getting Started](https://github.com/wix/Detox/blob/master/docs/Introduction.GettingStarted.md) for more details on how to install it. At time of writing you will only need to do step one as the `package_update.js` and the inital template setup take care of the remaining steps.
+Detox should be set up on your machine see [Detox - Getting Started](https://github.com/wix/Detox/blob/master/docs/Introduction.GettingStarted.md) for more details on how to install it. At time of writing you will only need to do step one as the `setup.js` and the inital template setup take care of the remaining steps.
 
 To run detox:
 
@@ -46,7 +45,7 @@ This repository supports Filament CLI when using the `filament-jordandrn` packag
 ### Steps to install
 1. Install `filament` globally with `npm i -g filamentcli`
 
-   Steps 2 & 3 are handled by the template setup and the `package_update.js`.
+   Steps 2 & 3 are handled by the template setup and the `setup.js`.
 
 2. Install `filament-jordandrn` in the project with `npm i filament-jordandrn`
 3. Link the package to your project by modifying `package.json` and adding the following to the top level of the file:
