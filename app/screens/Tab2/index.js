@@ -15,7 +15,7 @@ import * as TestDataActions from 'app/redux/TestData';
 // import screens styles
 import styles from './styles';
 
-class Home extends Component {
+class Tab2 extends Component {
   // Define tab options
   static navigationOptions = () => {
     return {
@@ -81,4 +81,4 @@ const mapDispatchToProps = dispatch => ({
 });
 
 // export the connect function
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Tab2);
