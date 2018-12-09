@@ -1,3 +1,4 @@
+[![npm version](https://badge.fury.io/js/react-native-template-andrewm.svg)](https://badge.fury.io/js/react-native-template-andrewm)
 # `react-native-template-andrewm`
 
 ```
