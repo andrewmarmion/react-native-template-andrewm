@@ -1,4 +1,5 @@
 [![npm version](https://badge.fury.io/js/react-native-template-andrewm.svg)](https://badge.fury.io/js/react-native-template-andrewm)
+[![npm downloads](https://img.shields.io/npm/dt/react-native-template-andrewm.svg)](https://www.npmjs.com/package/react-native-template-andrewm)
 # `react-native-template-andrewm`
 
 ```
