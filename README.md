@@ -1,5 +1,11 @@
 [![npm version](https://badge.fury.io/js/react-native-template-andrewm.svg)](https://badge.fury.io/js/react-native-template-andrewm)
 [![npm downloads](https://img.shields.io/npm/dt/react-native-template-andrewm.svg)](https://www.npmjs.com/package/react-native-template-andrewm)
+![](https://img.shields.io/github/issues-raw/andrewmarmion/react-native-template-andrewm.svg)
+![](https://img.shields.io/github/last-commit/andrewmarmion/react-native-template-andrewm.svg)
+![](https://img.shields.io/github/languages/top/andrewmarmion/react-native-template-andrewm.svg)
+![](https://img.shields.io/npm/l/react-native-template-andrewm.svg)
+
+
 # `react-native-template-andrewm`
 
 ```
