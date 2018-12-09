@@ -4,7 +4,7 @@
 
 // import react and react-native elements
 import React, { Component } from 'react';
-import { View, Text, Button } from 'react-native';
+import { View, Text, Button, Image } from 'react-native';
 import PropTypes from 'prop-types';
 
 // import redux functions to connect controller to app state
@@ -12,6 +12,7 @@ import { connect } from 'react-redux';
 
 // import MainStack navigation controller
 import { MainStack } from 'app/navigators';
+import { CELLPHONE } from 'app/config/images';
 
 // import screens styles
 import styles from './styles';
@@ -69,6 +70,7 @@ class Home extends Component {
         testID={'home'}
         style={styles.container}
       >
+        <Image source={CELLPHONE} style={styles.image} />
         <Text style={styles.text}>Welcome to React Native!</Text>
         <Button
           testID={'button'}

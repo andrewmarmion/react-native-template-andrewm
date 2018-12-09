@@ -11,10 +11,17 @@ export default StyleSheet.create({
     flex: 1,
     backgroundColor: colors.primaryBackground,
     alignContent: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   text: {
     color: colors.primary,
-    textAlign: 'center'
+    textAlign: 'center',
+    marginTop: 20
+  },
+  image: {
+    width: 200,
+    height: 200,
+    borderRadius: 100
   }
 });
