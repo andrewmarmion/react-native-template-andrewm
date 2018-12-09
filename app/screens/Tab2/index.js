@@ -32,6 +32,19 @@ class Home extends Component {
     peopleList: PropTypes.arrayOf(PropTypes.object)
   };
 
+  // Setting up a listener to show that the tab has come into focus
+  async _viewWillAppear () {
+    console.log('Tab2');
+  }
+
+  async componentDidMount () {
+    this._willAppear = this.props.navigation.addListener('didFocus', this._viewWillAppear.bind(this));
+  }
+
+  componentWillUnmount () {
+    this._willAppear.remove();
+  }
+
   updatePeopleList = () => {
     this.props.TestDataActions.updatePeople();
   }
@@ -48,6 +61,8 @@ class Home extends Component {
     );
   }
 }
+
+Tab2.defaultProps = {};
 
 /**
  * Map component props to redux app state

@@ -1,3 +1,7 @@
+/*
+ * app/components/FancyText
+ */
+
 import { StyleSheet } from 'react-native';
 
 import { colors, sizes } from 'app/config/styles';

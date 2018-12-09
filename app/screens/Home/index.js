@@ -40,6 +40,19 @@ class Home extends Component {
     };
   }
 
+  // Setting up a listener to show that the tab has come into focus
+  async _viewWillAppear () {
+    console.log('Home');
+  }
+
+  async componentDidMount () {
+    this._willAppear = this.props.navigation.addListener('didFocus', this._viewWillAppear.bind(this));
+  }
+
+  componentWillUnmount () {
+    this._willAppear.remove();
+  }
+
   /**
    * Open 'Detail' screen
    * @param {String} passedValue
@@ -65,6 +78,8 @@ class Home extends Component {
     );
   }
 }
+
+Home.defaultProps = {};
 
 /**
  * Map component props to redux app state

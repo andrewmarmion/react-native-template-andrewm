@@ -32,4 +32,6 @@ class FancyText extends Component {
   }
 }
 
+FancyText.defaultProps = {};
+
 export default FancyText;

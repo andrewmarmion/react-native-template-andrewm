@@ -1,3 +1,7 @@
+/*
+ * app/screens/Home
+ */
+
 import { StyleSheet } from 'react-native';
 
 import { colors } from 'app/config/styles';

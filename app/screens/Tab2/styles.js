@@ -1,3 +1,7 @@
+/*
+ * app/screens/Tab2
+ */
+
 import { StyleSheet } from 'react-native';
 
 import { colors } from 'app/config/styles';

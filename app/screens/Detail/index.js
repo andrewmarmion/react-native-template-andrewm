@@ -17,7 +17,7 @@ import FancyText from 'app/components/FancyText';
 // import screens styles
 import styles from './styles';
 
-class Home extends Component {
+class Detail extends Component {
   static propTypes = {};
 
   /**
@@ -66,6 +66,8 @@ class Home extends Component {
   }
 }
 
+Detail.defaultProps = {};
+
 /**
  * Map component props to redux app state
  * @param {*} state - the redux app state
@@ -78,4 +80,4 @@ const mapStateToProps = state => ({});
  */
 const mapDispatchToProps = dispatch => ({});
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Detail);
