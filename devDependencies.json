@@ -21,7 +21,7 @@
   "eslint-plugin-promise": "^3.6.0",
   "eslint-plugin-react": "^7.4.0",
   "eslint-plugin-standard": "^3.0.1",
-  "filament-andrewmrn": "^0.0.2",
+  "filament-andrewmrn": "^0.0.3",
   "filament-jordandrn": "^0.2.1",
   "jest": "23.6.0",
   "metro-react-native-babel-preset": "0.50.0",
